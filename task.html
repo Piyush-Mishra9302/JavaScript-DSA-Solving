@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo List</title>
+</head>
+<body>
+ 
+  <ul id="todoList"></ul>
+
+  <script>
+    
+    let todos = [
+      { id: 1, task: "Learn JavaScript" },
+      { id: 2, task: "Practice React" },
+      { id: 3, task: "Build Projects" }
+    ];
+
+    const todoList = document.getElementById("todoList");
+
+    
+    function renderTodos() {
+      todoList.innerHTML = ""; 
+      todos.forEach((item) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          ${item.task}
+          <button onclick="deleteTodo(${item.id})">Delete</button>
+        `;
+        todoList.appendChild(li);
+      });
+    }
+
+  
+    function deleteTodo(id) {
+      todos = todos.filter(todo => todo.id !== id); 
+      renderTodos(); 
+    }
+
+
+    renderTodos();
+  </script>
+</body>
+</html>

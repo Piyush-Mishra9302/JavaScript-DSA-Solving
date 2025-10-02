@@ -22,15 +22,27 @@
 //Rivision
 
 
-function PalindromeString (str) {
+// function PalindromeString (str) {
 
-    let cleanStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+//     let cleanStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+//     let reversedStr = cleanStr.split('').reverse().join('');
+
+//     if(cleanStr===reversedStr){
+//         console.log("String is Palindrome");
+//     }else{
+//         console.log("String is not a palindrome");
+//     }
+// }
+
+const PalindromeString = (str) => {
+    let cleanStr = str.replace(/[^a-zA-Z0-9]/g,'').toLowerCase();
 
     let reversedStr = cleanStr.split('').reverse().join('');
 
-    if(cleanStr===reversedStr){
-        console.log("String is Palindrome");
-    }else{
+    if(cleanStr === reversedStr){
+        console.log("String is a Palindrome");
+    } else {
         console.log("String is not a palindrome");
     }
 }

@@ -1,15 +1,25 @@
 
-let removeDuplicates = (str) =>  {
+// let removeDuplicates = (str) =>  {
 
+//     let result = '';
+
+//     for(char of str){
+//         if(result.includes(char) == false){
+//             result += char;
+//         }
+//     }
+//     return result;
+
+// }
+
+let removeDuplicates = (str) => {
     let result = '';
-
-    for(char of str){
+    for (let char of str){
         if(result.includes(char) == false){
             result += char;
         }
     }
     return result;
-
 }
 
 let str = 'aassdlalsdldkskdfjdjsjs';

@@ -11,13 +11,20 @@
 
 //Reverse a string using fundamental programming
 
-const reverse = (str) =>{
-    let reversed = '';
+// const reverse = (str) =>{
+//     let reversed = '';
    
-    for(let i = str.length - 1; i>=0; i--){
-        reversed += str[i];
-    }
-    return reversed;
+//     for(let i = str.length - 1; i>=0; i--){
+//         reversed += str[i];
+//     }
+//     return reversed;
+// }
+// let str = "Vashu is a student";
+// console.log(reverse(str));
+const reverseNum = (num) => {
+    let newNum = num.toString();
+   let  reversedNum = Number(newNum.split('').reverse().join(''));
+   return reversedNum;
 }
-let str = "Vashu is a student";
-console.log(reverse(str));
+let num = 1234;
+console.log(reverseNum(num));
