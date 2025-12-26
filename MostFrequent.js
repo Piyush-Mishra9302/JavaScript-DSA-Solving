@@ -25,28 +25,55 @@
 // const arr = [2,3,4,5,6,7,8,2,4,5,6,7,8,6,4,3,4,6,7,89,76,54,33,5,6,8,6,5,4,32,5,8,7,5,3,4,76,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6];
 // console.log("Most occured element in this array is : ", mostRepeated(arr));
 
+// const mostRepeated = (arr) => {
+//   let frequency = {}; // to track the frequency of each element
+//   let maxcount = 0; // to track the occurance of each element
+//   let mostFrequent = null; // for the most frequent element
+//   for (let element of arr) {
+//     if (frequency[element]) {
+//       frequency[element]++;
+//     } else {
+//       frequency[element] = 1;
+//     }
+//     //check if the current elements frequency is highest or not
+//     if (frequency[element] > maxcount) {
+//       maxcount = frequency[element];
+//       mostFrequent = element;
+//     }
+//   }
+//   console.log("The occurance of every element is : ", frequency)
+//   return mostFrequent;
+// };
+// const arr = [
+//   2, 3, 4, 5, 6, 7, 8, 2, 4, 5, 6, 7, 8, 6, 4, 3, 4, 6, 7, 89, 76, 54, 33, 5, 6,
+//   8, 6, 5, 4, 32, 5, 8, 7, 5, 3, 4, 76, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+//   6, 6,
+// ];
+// console.log("Most occured element in this array is : ", mostRepeated(arr));
+
 const mostRepeated = (arr) => {
-  let frequency = {}; // to track the frequency of each element
-  let maxcount = 0; // to track the occurance of each element
-  let mostFrequent = null; // for the most frequent element
-  for (let element of arr) {
-    if (frequency[element]) {
+  let frequency = {};
+  let maxCount = 0;
+  let mostFrequent = null;
+
+  for(let element of arr){
+    if(frequency[element]){
       frequency[element]++;
-    } else {
+    } else{
       frequency[element] = 1;
     }
-    //check if the current elements frequency is highest or not
-    if (frequency[element] > maxcount) {
-      maxcount = frequency[element];
+
+    if(frequency[element] > maxCount){
+      maxCount = frequency[element];
       mostFrequent = element;
     }
   }
-  console.log("The occurance of every element is : ", frequency)
+  console.log(`frequency of each element is :  ${frequency}`)
   return mostFrequent;
-};
-const arr = [
-  2, 3, 4, 5, 6, 7, 8, 2, 4, 5, 6, 7, 8, 6, 4, 3, 4, 6, 7, 89, 76, 54, 33, 5, 6,
-  8, 6, 5, 4, 32, 5, 8, 7, 5, 3, 4, 76, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
-  6, 6,
+}
+
+const arr1 = [
+  2,3,4,5,6,7,8,9,7,5,3,4,5,6,5,45,5,6,5,4,34567,5,435,6,5,4,5,6,5,3,5,6,5,4,4,4,4,4,4,4,4,4
 ];
-console.log("Most occured element in this array is : ", mostRepeated(arr));
+console.log("Most frequent element is : ", mostRepeated(arr1));
+

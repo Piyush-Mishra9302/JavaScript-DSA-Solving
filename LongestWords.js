@@ -15,10 +15,22 @@
 
 // }
 
+// const longestWord = (str) => {
+//     let longest = '';
+//     let words = str.split(' ');
+//     for (let word of words){
+//         if(word.length > longest.length){
+//             longest = word;
+//         }
+//     }
+//     return longest;
+// }
+
 const longestWord = (str) => {
     let longest = '';
+
     let words = str.split(' ');
-    for (let word of words){
+    for(let word of words){
         if(word.length > longest.length){
             longest = word;
         }
@@ -26,5 +38,5 @@ const longestWord = (str) => {
     return longest;
 }
 
-let str = "myNamee is Piyushh Mishra and i am in vindhya";
+let str = "myName is Piyushhhhhh Mishra and i am in vindhya";
 console.log(`Longest word in this sentence is : ${longestWord(str)}`);

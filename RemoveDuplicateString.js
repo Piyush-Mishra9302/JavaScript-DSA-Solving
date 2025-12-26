@@ -12,9 +12,10 @@
 
 // }
 
+
 let removeDuplicates = (str) => {
     let result = '';
-    for (let char of str){
+    for(let char of str){
         if(result.includes(char) == false){
             result += char;
         }
